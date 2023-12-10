@@ -1,14 +1,14 @@
-<#
+*
 New-FlashArrayExcelReport.ps1
-version 1.0.0
+version 1.0.1
 Original script credit to Seteesh1 in the Pure Storage Community Forums
-TO-DO:
+_TO-DO
 - Add capability for multiple array credentials
 - Add more Pod metrics
 - add more general arrray information - ntp, snmp, syslog, roles, settings, etc
 - add networking
 
-.SYNOPSIS
+_SYNOPSIS
     Create an Excel workbook that contains FlashArray Information for each array specified in a file.
     .DESCRIPTION
     This cmdlet will retrieve array, volume, host, pod, and snapshot capacity information from all of the FlashArrays listed in the txt file and output it to an Excel spreadsheet. Each arrays will have it's own filename and the current date and time will be added to the filenames.
@@ -33,7 +33,7 @@ TO-DO:
 
     Creates an Excel file in the the %temp% folder for each array in the Arrays.txt file, using the username and plaintext password file supplied.
 
-    .EXAMPLE
+    *EXAMPLE
     $Creds = (Get-Credential)
     New-FlashArrayExcelReport -ArrayList "c:\temp\arrays.txt" -snapLimit 25 -OutPath "c:\outputs"
 
